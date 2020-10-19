@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Post One</title>
+</head>
+<body>
+    <header class="hero blog">
+        <div class="navbar top" id="navbar">
+            <h1 class="logo">
+                <span class="text-primary"><i class="fas fa-book-open"></i>Edge</span>Business
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#cases">Cases</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>Blog</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="post">
+            <h2>Blog Post One</h2>
+            <p class="meta">
+                <i class="fas fa-user"></i>Posted by <strong>John Doe</strong> | June 19 2020
+            </p>
+            <img src="images/blog/blog1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro libero sapiente maiores nemo distinctio enim necessitatibus doloribus assumenda iste laborum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel similique numquam veniam quo voluptatibus cumque nemo.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum praesentium explicabo incidunt provident maxime, ullam error quis illo qui pariatur sunt voluptatum eligendi maiores a, sit impedit odit aperiam quae, perferendis facere. Tempora praesentium veritatis similique saepe, sapiente aliquam dolores rerum minus possimus laudantium recusandae culpa neque! Aperiam quibusdam consectetur saepe cupiditate reiciendis. Possimus, voluptas soluta ullam facilis facere sit!</p>
+        </section>
+    </main>
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+            <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+            <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+            <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2020 - EdgeBusiness</p>
+    </footer>
+    <script>
+        const navbar = document.getElementById('navbar')
+        let scrolled = false
+
+        window.onscroll = function() {
+            if(window.pageYOffset > 200) {
+                navbar.classList.remove('top')
+                if(!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)'
+                }
+                setTimeout(() => {
+                    navbar.style.transform = 'translateY(0)'
+                    scrolled = true
+                }, 200);
+            } else {
+                navbar.classList.add('top')
+                scrolled = false
+            }
+        }
+    </script>
+</body>
+</html>
